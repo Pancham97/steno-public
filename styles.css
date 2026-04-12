@@ -162,24 +162,6 @@ p {
     align-items: start;
 }
 
-.hero--split {
-    grid-template-columns: minmax(0, 1fr) 13rem;
-}
-
-.logo-panel {
-    display: grid;
-    place-items: center;
-    padding: 1rem;
-    border: 1px solid var(--line);
-    border-radius: 1.5rem;
-    background: var(--panel);
-}
-
-.logo-panel img {
-    width: 100%;
-    border-radius: 1.15rem;
-}
-
 .cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -256,14 +238,9 @@ p {
 }
 
 @media (max-width: 860px) {
-    .hero--split,
     .cards,
     .cards--2 {
         grid-template-columns: 1fr;
-    }
-
-    .logo-panel {
-        max-width: 13rem;
     }
 }
 
