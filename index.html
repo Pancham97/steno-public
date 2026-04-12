@@ -3,26 +3,26 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Steno Privacy</title>
-        <meta http-equiv="refresh" content="0; url=./privacy/" />
+        <title>Steno</title>
         <meta
             name="description"
-            content="Redirecting to the Steno privacy policy."
+            content="Public support and privacy pages for Steno."
         />
-        <link rel="canonical" href="./privacy/" />
-        <script>
-            window.location.replace("./privacy/");
-        </script>
         <style>
             :root {
                 color-scheme: light;
                 --bg: oklch(98.4% 0.004 95);
+                --surface: oklch(99.2% 0.003 95);
                 --ink: oklch(26% 0.015 255);
                 --muted: oklch(49% 0.012 255);
                 --line: oklch(89% 0.006 95);
                 --body:
                     "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica,
                     sans-serif;
+                --display:
+                    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+                    Georgia, serif;
+                --max-width: 42rem;
             }
 
             * {
@@ -31,39 +31,113 @@
 
             body {
                 margin: 0;
-                min-height: 100vh;
-                display: grid;
-                place-items: center;
-                padding: 2rem;
                 background: var(--bg);
                 color: var(--ink);
                 font-family: var(--body);
-            }
-
-            main {
-                max-width: 32rem;
-                padding: 1.25rem 1.4rem;
-                border: 1px solid var(--line);
-                border-radius: 1rem;
-                background: white;
-            }
-
-            p {
-                margin: 0;
-                color: var(--muted);
-                line-height: 1.6;
+                line-height: 1.65;
             }
 
             a {
                 color: inherit;
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.16em;
+            }
+
+            .page {
+                width: min(calc(100% - 2rem), var(--max-width));
+                margin: 0 auto;
+                padding: 3rem 0 4rem;
+            }
+
+            .topline {
+                margin-bottom: 2rem;
+                color: var(--muted);
+                font-size: 0.92rem;
+            }
+
+            h1,
+            h2 {
+                margin: 0;
+                font-family: var(--display);
+                font-weight: 700;
+                line-height: 1.08;
+                letter-spacing: -0.03em;
+            }
+
+            h1 {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+                max-width: 8ch;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: 1.08rem;
+                font-family: var(--body);
+                letter-spacing: 0;
+                margin-bottom: 0.8rem;
+            }
+
+            p,
+            li {
+                color: color-mix(in oklab, var(--ink) 88%, var(--muted));
+                font-size: 1rem;
+            }
+
+            p {
+                margin: 0 0 1rem;
+                max-width: 60ch;
+            }
+
+            .links {
+                margin-top: 1.75rem;
+                padding: 1.2rem 1.35rem;
+                border: 1px solid var(--line);
+                border-radius: 1rem;
+                background: var(--surface);
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 1.1rem;
+            }
+
+            li + li {
+                margin-top: 0.45rem;
+            }
+
+            @media (max-width: 640px) {
+                .page {
+                    width: min(calc(100% - 1.25rem), var(--max-width));
+                    padding: 2rem 0 3rem;
+                }
             }
         </style>
     </head>
     <body>
-        <main>
-            <p>
-                Redirecting to the <a href="./privacy/">Steno Privacy Policy</a>.
-            </p>
-        </main>
+        <div class="page">
+            <div class="topline">Steno</div>
+
+            <main>
+                <h1>Support and privacy.</h1>
+                <p>
+                    Public support and privacy information for Steno on macOS,
+                    iPhone, and iPad.
+                </p>
+                <p>
+                    For support, contact
+                    <a href="mailto:hello@panchamkhaitan.com"
+                        >hello@panchamkhaitan.com</a
+                    >.
+                </p>
+
+                <section class="links" aria-label="Site links">
+                    <h2>Pages</h2>
+                    <ul>
+                        <li><a href="./support/">Support</a></li>
+                        <li><a href="./privacy/">Privacy Policy</a></li>
+                    </ul>
+                </section>
+            </main>
+        </div>
     </body>
 </html>
