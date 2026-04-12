@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Steno</title>
+        <meta
+            name="description"
+            content="Steno is a local-first dictation app for macOS, iPhone, and iPad."
+        />
+        <style>
+            :root {
+                color-scheme: light;
+                --bg: oklch(98.4% 0.004 95);
+                --surface: oklch(99.2% 0.003 95);
+                --surface-strong: oklch(97.6% 0.006 95);
+                --ink: oklch(26% 0.015 255);
+                --muted: oklch(49% 0.012 255);
+                --line: oklch(89% 0.006 95);
+                --accent: oklch(59% 0.05 78);
+                --body:
+                    "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica,
+                    sans-serif;
+                --display:
+                    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+                    Georgia, serif;
+                --max-width: 56rem;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--ink);
+                font-family: var(--body);
+                line-height: 1.6;
+            }
+
+            a {
+                color: inherit;
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.16em;
+            }
+
+            .page {
+                width: min(calc(100% - 2rem), var(--max-width));
+                margin: 0 auto;
+                padding: 3rem 0 4rem;
+            }
+
+            .topline {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                margin-bottom: 2.5rem;
+                color: var(--muted);
+                font-size: 0.92rem;
+            }
+
+            .topline nav {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            h1,
+            h2 {
+                margin: 0;
+                font-family: var(--display);
+                font-weight: 700;
+                line-height: 1.06;
+                letter-spacing: -0.03em;
+            }
+
+            h1 {
+                max-width: 10ch;
+                font-size: clamp(2.8rem, 8vw, 4.8rem);
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-bottom: 0.55rem;
+            }
+
+            p {
+                margin: 0 0 1rem;
+                max-width: 62ch;
+                color: color-mix(in oklab, var(--ink) 88%, var(--muted));
+                font-size: 1rem;
+            }
+
+            .hero {
+                display: grid;
+                grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+                gap: 1rem;
+                align-items: end;
+            }
+
+            .lede {
+                font-size: 1.08rem;
+            }
+
+            .callout {
+                padding: 1.15rem 1.2rem;
+                border: 1px solid var(--line);
+                border-radius: 1.1rem;
+                background: var(--surface);
+            }
+
+            .callout strong {
+                display: block;
+                margin-bottom: 0.35rem;
+                font-size: 0.92rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: var(--accent);
+            }
+
+            .card-grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .card {
+                padding: 1.2rem;
+                border: 1px solid var(--line);
+                border-radius: 1.1rem;
+                background: var(--surface);
+            }
+
+            .card.featured {
+                background: var(--surface-strong);
+            }
+
+            .card p:last-child {
+                margin-bottom: 0;
+            }
+
+            .footer-links {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--line);
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 840px) {
+                .hero,
+                .card-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 640px) {
+                .page {
+                    width: min(calc(100% - 1.25rem), var(--max-width));
+                    padding: 2rem 0 3rem;
+                }
+
+                .topline {
+                    flex-direction: column;
+                    gap: 0.35rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <div class="topline">
+                <div>Steno</div>
+                <nav aria-label="Site links">
+                    <a href="../support/">Support</a>
+                    <a href="../privacy/">Privacy</a>
+                </nav>
+            </div>
+
+            <main>
+                <section class="hero">
+                    <div>
+                        <h1>Dictation that stays out of the way.</h1>
+                        <p class="lede">
+                            Steno is a local-first dictation app for Mac,
+                            iPhone, and iPad. Capture speech, clean up text,
+                            and keep moving.
+                        </p>
+                    </div>
+
+                    <aside class="callout" aria-label="Quick summary">
+                        <strong>In brief</strong>
+                        <p>
+                            No account. No tracker-heavy product layer. Built
+                            for fast speech-to-text workflows on Apple devices.
+                        </p>
+                    </aside>
+                </section>
+
+                <section class="card-grid" aria-label="Product overview">
+                    <article class="card featured">
+                        <h2>Local-first</h2>
+                        <p>
+                            Audio and transcript work stay on your device by
+                            default.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h2>Made for writing flow</h2>
+                        <p>
+                            Capture ideas quickly, review the transcript, and
+                            keep editing without friction.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h2>Apple platform focused</h2>
+                        <p>
+                            Designed for macOS, iPhone, and iPad with simple,
+                            native workflows.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="card-grid" aria-label="Why Steno">
+                    <article class="card">
+                        <h2>Private by default</h2>
+                        <p>
+                            Steno is built around local processing, not a
+                            required cloud account.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h2>Minimal interface</h2>
+                        <p>
+                            Clear structure, fewer distractions, and direct
+                            controls for the core job.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h2>Support is direct</h2>
+                        <p>
+                            Questions and bug reports go to
+                            <a href="mailto:hello@panchamkhaitan.com"
+                                >hello@panchamkhaitan.com</a
+                            >.
+                        </p>
+                    </article>
+                </section>
+
+                <div class="footer-links">
+                    <a href="../support/">Support</a>
+                    <a href="../privacy/">Privacy Policy</a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
