@@ -1,0 +1,283 @@
+:root {
+    color-scheme: light;
+    --bg: #f5f5f7;
+    --panel: #ffffff;
+    --ink: #1d1d1f;
+    --muted: #6e6e73;
+    --line: #d2d2d7;
+    --link: #06c;
+    --max-width: 48rem;
+    --max-width-wide: 62rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family:
+        -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site {
+    width: min(calc(100% - 2rem), var(--max-width));
+    margin: 0 auto;
+    padding: 1.5rem 0 4rem;
+}
+
+.site--wide {
+    width: min(calc(100% - 2rem), var(--max-width-wide));
+}
+
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.brand:hover {
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.85rem;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    object-fit: cover;
+}
+
+.brand-name {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: var(--muted);
+}
+
+.nav a[aria-current="page"],
+.nav a:hover {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--muted);
+    font-size: 0.87rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.06;
+}
+
+h1 {
+    margin-bottom: 0.8rem;
+    max-width: 11ch;
+    font-size: clamp(2.75rem, 8vw, 4.9rem);
+}
+
+h2 {
+    margin-bottom: 0.45rem;
+    font-size: clamp(1.4rem, 4vw, 1.75rem);
+}
+
+h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.05rem;
+}
+
+p,
+li {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+p {
+    margin: 0 0 1rem;
+    max-width: 38rem;
+}
+
+.lede {
+    margin: 0;
+    max-width: 40rem;
+    font-size: 1.15rem;
+    line-height: 1.55;
+}
+
+.hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.hero--split {
+    grid-template-columns: minmax(0, 1fr) 13rem;
+}
+
+.logo-panel {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 1.5rem;
+    background: var(--panel);
+}
+
+.logo-panel img {
+    width: 100%;
+    border-radius: 1.15rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.cards--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+    padding: 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 1.4rem;
+    background: var(--panel);
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.section {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+}
+
+.list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.list li + li {
+    margin-top: 0.45rem;
+}
+
+.list-plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-plain li {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--line);
+}
+
+.list-plain li:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.list-plain strong {
+    display: block;
+    margin-bottom: 0.15rem;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.page-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+    .hero--split,
+    .cards,
+    .cards--2 {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-panel {
+        max-width: 13rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .site,
+    .site--wide {
+        width: min(calc(100% - 1.25rem), var(--max-width-wide));
+        padding: 1rem 0 3rem;
+    }
+
+    .masthead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 2.25rem;
+    }
+}

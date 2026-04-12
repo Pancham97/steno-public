@@ -8,222 +8,95 @@
             name="description"
             content="Support page for Steno on macOS, iPhone, and iPad."
         />
-        <style>
-            :root {
-                color-scheme: light;
-                --bg: oklch(98.4% 0.004 95);
-                --surface: oklch(99.2% 0.003 95);
-                --ink: oklch(26% 0.015 255);
-                --muted: oklch(49% 0.012 255);
-                --line: oklch(89% 0.006 95);
-                --body:
-                    "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica,
-                    sans-serif;
-                --display:
-                    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
-                    Georgia, serif;
-                --max-width: 46rem;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                margin: 0;
-                background: var(--bg);
-                color: var(--ink);
-                font-family: var(--body);
-                line-height: 1.65;
-            }
-
-            a {
-                color: inherit;
-                text-decoration-thickness: 0.08em;
-                text-underline-offset: 0.16em;
-            }
-
-            .page {
-                width: min(calc(100% - 2rem), var(--max-width));
-                margin: 0 auto;
-                padding: 3rem 0 4rem;
-            }
-
-            .topline {
-                display: flex;
-                justify-content: space-between;
-                gap: 1rem;
-                margin-bottom: 2.5rem;
-                color: var(--muted);
-                font-size: 0.9rem;
-            }
-
-            .topline strong {
-                color: var(--ink);
-                font-weight: 600;
-            }
-
-            header {
-                margin-bottom: 2.5rem;
-            }
-
-            h1,
-            h2 {
-                margin: 0;
-                font-family: var(--display);
-                font-weight: 700;
-                line-height: 1.06;
-                letter-spacing: -0.03em;
-            }
-
-            h1 {
-                font-size: clamp(2.6rem, 8vw, 4.2rem);
-                max-width: 9ch;
-                margin-bottom: 1rem;
-            }
-
-            h2 {
-                font-size: clamp(1.35rem, 3vw, 1.75rem);
-                margin-bottom: 0.7rem;
-            }
-
-            p,
-            li {
-                font-size: 1rem;
-                color: color-mix(in oklab, var(--ink) 88%, var(--muted));
-            }
-
-            p {
-                margin: 0 0 1rem;
-                max-width: 62ch;
-            }
-
-            ul {
-                margin: 0;
-                padding-left: 1.1rem;
-                max-width: 62ch;
-            }
-
-            li + li {
-                margin-top: 0.45rem;
-            }
-
-            .summary {
-                margin-top: 1.5rem;
-                padding: 1.25rem 1.35rem;
-                border: 1px solid var(--line);
-                border-radius: 1rem;
-                background: var(--surface);
-            }
-
-            .summary h2 {
-                margin-bottom: 0.85rem;
-                font-size: 1.08rem;
-                letter-spacing: 0;
-                font-family: var(--body);
-                font-weight: 600;
-            }
-
-            section {
-                padding: 1.4rem 0;
-                border-top: 1px solid var(--line);
-            }
-
-            footer {
-                margin-top: 1.6rem;
-                padding-top: 1rem;
-                border-top: 1px solid var(--line);
-                color: var(--muted);
-                font-size: 0.92rem;
-            }
-
-            @media (max-width: 640px) {
-                .page {
-                    width: min(calc(100% - 1.25rem), var(--max-width));
-                    padding: 2rem 0 3rem;
-                }
-
-                .topline {
-                    flex-direction: column;
-                    gap: 0.25rem;
-                    margin-bottom: 2rem;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="../styles.css" />
     </head>
     <body>
-        <div class="page">
-            <div class="topline">
-                <div><strong>Steno</strong> Support</div>
-                <div><a href="../privacy/">Privacy Policy</a></div>
-            </div>
+        <div class="site">
+            <header class="masthead">
+                <a class="brand" href="../" aria-label="Steno home">
+                    <img
+                        class="brand-mark"
+                        src="../assets/steno-logo.jpg"
+                        alt="Steno waveform logo"
+                        width="40"
+                        height="40"
+                    />
+                    <span class="brand-name">Steno</span>
+                </a>
 
-            <header>
-                <h1>Support for Steno.</h1>
-                <p>
-                    For support, bug reports, and general questions, email
-                    <a href="mailto:hello@panchamkhaitan.com"
-                        >hello@panchamkhaitan.com</a
-                    >.
-                </p>
-
-                <div class="summary" aria-label="Support summary">
-                    <h2>Include this in your email</h2>
-                    <ul>
-                        <li>What device you are using: Mac, iPhone, or iPad.</li>
-                        <li>Your app version and OS version.</li>
-                        <li>What you expected to happen.</li>
-                        <li>What happened instead, and how to reproduce it.</li>
-                    </ul>
-                </div>
+                <nav class="nav" aria-label="Site">
+                    <a href="../marketing/">Marketing</a>
+                    <a href="./" aria-current="page">Support</a>
+                    <a href="../privacy/">Privacy</a>
+                </nav>
             </header>
 
             <main>
-                <section id="permissions">
-                    <h2>Common setup checks</h2>
-                    <ul>
-                        <li>
-                            If dictation is not starting, confirm Microphone
-                            access is enabled for Steno.
-                        </li>
-                        <li>
-                            If transcription is unavailable, confirm any Apple
-                            Speech Recognition permission the platform requires.
-                        </li>
-                        <li>
-                            If text insertion on macOS is not working, confirm
-                            Accessibility access is enabled for Steno.
-                        </li>
-                    </ul>
+                <section class="hero hero--split">
+                    <div>
+                        <p class="eyebrow">Support</p>
+                        <h1>Help for Steno.</h1>
+                        <p class="lede">
+                            For support, bug reports, and general questions,
+                            email
+                            <a href="mailto:hello@panchamkhaitan.com"
+                                >hello@panchamkhaitan.com</a
+                            >.
+                        </p>
+                    </div>
+
+                    <div class="logo-panel">
+                        <img
+                            src="../assets/steno-logo.jpg"
+                            alt="Steno waveform logo"
+                            width="256"
+                            height="256"
+                        />
+                    </div>
                 </section>
 
-                <section id="reports">
-                    <h2>Bug reports</h2>
-                    <p>
-                        If you are reporting a bug, include the steps that led
-                        to the problem and whether it happens every time or only
-                        sometimes. Screenshots are helpful when the issue is
-                        visual.
-                    </p>
+                <section class="cards cards--2" aria-label="Support details">
+                    <article class="card">
+                        <h3>Include this in your email</h3>
+                        <ul class="list">
+                            <li>Device: Mac, iPhone, or iPad.</li>
+                            <li>App version and OS version.</li>
+                            <li>What you expected to happen.</li>
+                            <li>What happened instead.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Common checks</h3>
+                        <ul class="list">
+                            <li>Confirm Microphone access is enabled.</li>
+                            <li>
+                                Confirm any Apple Speech Recognition permission
+                                the platform requires.
+                            </li>
+                            <li>
+                                On macOS, confirm Accessibility access if text
+                                insertion is not working.
+                            </li>
+                        </ul>
+                    </article>
                 </section>
 
-                <section id="privacy">
+                <section class="section">
                     <h2>Privacy</h2>
                     <p>
-                        Privacy details are available at
-                        <a href="../privacy/">the Steno Privacy Policy</a>.
+                        Privacy details are available in the
+                        <a href="../privacy/">Steno Privacy Policy</a>.
                     </p>
                 </section>
-
-                <footer>
-                    <p>
-                        Support contact:
-                        <a href="mailto:hello@panchamkhaitan.com"
-                            >hello@panchamkhaitan.com</a
-                        >.
-                    </p>
-                </footer>
             </main>
+
+            <footer class="footer">
+                Support:
+                <a href="mailto:hello@panchamkhaitan.com"
+                    >hello@panchamkhaitan.com</a
+                >
+            </footer>
         </div>
     </body>
 </html>

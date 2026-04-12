@@ -6,139 +6,69 @@
         <title>Steno</title>
         <meta
             name="description"
-            content="Public support and privacy pages for Steno."
+            content="Marketing, support, and privacy pages for Steno."
         />
-        <style>
-            :root {
-                color-scheme: light;
-                --bg: oklch(98.4% 0.004 95);
-                --surface: oklch(99.2% 0.003 95);
-                --ink: oklch(26% 0.015 255);
-                --muted: oklch(49% 0.012 255);
-                --line: oklch(89% 0.006 95);
-                --body:
-                    "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica,
-                    sans-serif;
-                --display:
-                    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
-                    Georgia, serif;
-                --max-width: 42rem;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                margin: 0;
-                background: var(--bg);
-                color: var(--ink);
-                font-family: var(--body);
-                line-height: 1.65;
-            }
-
-            a {
-                color: inherit;
-                text-decoration-thickness: 0.08em;
-                text-underline-offset: 0.16em;
-            }
-
-            .page {
-                width: min(calc(100% - 2rem), var(--max-width));
-                margin: 0 auto;
-                padding: 3rem 0 4rem;
-            }
-
-            .topline {
-                margin-bottom: 2rem;
-                color: var(--muted);
-                font-size: 0.92rem;
-            }
-
-            h1,
-            h2 {
-                margin: 0;
-                font-family: var(--display);
-                font-weight: 700;
-                line-height: 1.08;
-                letter-spacing: -0.03em;
-            }
-
-            h1 {
-                font-size: clamp(2.5rem, 8vw, 4rem);
-                max-width: 8ch;
-                margin-bottom: 1rem;
-            }
-
-            h2 {
-                font-size: 1.08rem;
-                font-family: var(--body);
-                letter-spacing: 0;
-                margin-bottom: 0.8rem;
-            }
-
-            p,
-            li {
-                color: color-mix(in oklab, var(--ink) 88%, var(--muted));
-                font-size: 1rem;
-            }
-
-            p {
-                margin: 0 0 1rem;
-                max-width: 60ch;
-            }
-
-            .links {
-                margin-top: 1.75rem;
-                padding: 1.2rem 1.35rem;
-                border: 1px solid var(--line);
-                border-radius: 1rem;
-                background: var(--surface);
-            }
-
-            ul {
-                margin: 0;
-                padding-left: 1.1rem;
-            }
-
-            li + li {
-                margin-top: 0.45rem;
-            }
-
-            @media (max-width: 640px) {
-                .page {
-                    width: min(calc(100% - 1.25rem), var(--max-width));
-                    padding: 2rem 0 3rem;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
-        <div class="page">
-            <div class="topline">Steno</div>
+        <div class="site">
+            <header class="masthead">
+                <a class="brand" href="./" aria-label="Steno home">
+                    <img
+                        class="brand-mark"
+                        src="./assets/steno-logo.jpg"
+                        alt="Steno waveform logo"
+                        width="40"
+                        height="40"
+                    />
+                    <span class="brand-name">Steno</span>
+                </a>
+
+                <nav class="nav" aria-label="Site">
+                    <a href="./marketing/">Marketing</a>
+                    <a href="./support/">Support</a>
+                    <a href="./privacy/">Privacy</a>
+                </nav>
+            </header>
 
             <main>
-                <h1>Support and privacy.</h1>
-                <p>
-                    Public support and privacy information for Steno on macOS,
-                    iPhone, and iPad.
-                </p>
-                <p>
-                    For support, contact
-                    <a href="mailto:hello@panchamkhaitan.com"
-                        >hello@panchamkhaitan.com</a
-                    >.
+                <p class="eyebrow">Local-first dictation for Apple devices</p>
+                <h1>Simple pages for Steno.</h1>
+                <p class="lede">
+                    A quiet public site for the App Store: one page for what
+                    Steno is, one for support, and one for privacy.
                 </p>
 
-                <section class="links" aria-label="Site links">
-                    <h2>Pages</h2>
-                    <ul>
-                        <li><a href="./marketing/">Marketing</a></li>
-                        <li><a href="./support/">Support</a></li>
-                        <li><a href="./privacy/">Privacy Policy</a></li>
-                    </ul>
+                <section class="cards" aria-label="Pages">
+                    <article class="card">
+                        <h3><a href="./marketing/">Marketing</a></h3>
+                        <p>A short overview of the product and its focus.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="./support/">Support</a></h3>
+                        <p>
+                            Contact details, setup checks, and what to include
+                            in bug reports.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="./privacy/">Privacy</a></h3>
+                        <p>
+                            A concise summary of what Steno accesses and what
+                            stays local.
+                        </p>
+                    </article>
                 </section>
             </main>
+
+            <footer class="footer">
+                Contact:
+                <a href="mailto:hello@panchamkhaitan.com"
+                    >hello@panchamkhaitan.com</a
+                >
+            </footer>
         </div>
     </body>
 </html>

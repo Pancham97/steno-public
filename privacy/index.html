@@ -6,304 +6,154 @@
         <title>Steno Privacy Policy</title>
         <meta
             name="description"
-            content="Simple privacy policy for Steno, a local-first dictation app for macOS, iPhone, and iPad."
+            content="Privacy policy for Steno, a local-first dictation app for macOS, iPhone, and iPad."
         />
-        <style>
-            :root {
-                color-scheme: light;
-                --bg: oklch(98.4% 0.004 95);
-                --surface: oklch(99.2% 0.003 95);
-                --ink: oklch(26% 0.015 255);
-                --muted: oklch(49% 0.012 255);
-                --line: oklch(89% 0.006 95);
-                --body:
-                    "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica,
-                    sans-serif;
-                --display:
-                    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
-                    Georgia, serif;
-                --max-width: 46rem;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            html {
-                background: var(--bg);
-            }
-
-            body {
-                margin: 0;
-                background: var(--bg);
-                color: var(--ink);
-                font-family: var(--body);
-                line-height: 1.65;
-            }
-
-            a {
-                color: inherit;
-                text-decoration-thickness: 0.08em;
-                text-underline-offset: 0.16em;
-            }
-
-            .page {
-                width: min(calc(100% - 2rem), var(--max-width));
-                margin: 0 auto;
-                padding: 3rem 0 4rem;
-            }
-
-            .topline {
-                display: flex;
-                justify-content: space-between;
-                gap: 1rem;
-                margin-bottom: 2.5rem;
-                color: var(--muted);
-                font-size: 0.9rem;
-            }
-
-            .topline strong {
-                color: var(--ink);
-                font-weight: 600;
-            }
-
-            header {
-                margin-bottom: 2.5rem;
-            }
-
-            h1,
-            h2 {
-                margin: 0;
-                font-family: var(--display);
-                font-weight: 700;
-                line-height: 1.06;
-                letter-spacing: -0.03em;
-            }
-
-            h1 {
-                font-size: clamp(2.6rem, 8vw, 4.2rem);
-                max-width: 10ch;
-                margin-bottom: 1rem;
-            }
-
-            h2 {
-                font-size: clamp(1.35rem, 3vw, 1.75rem);
-                margin-bottom: 0.7rem;
-            }
-
-            p,
-            li {
-                font-size: 1rem;
-                color: color-mix(in oklab, var(--ink) 88%, var(--muted));
-            }
-
-            p {
-                margin: 0 0 1rem;
-                max-width: 62ch;
-            }
-
-            ul {
-                margin: 0;
-                padding-left: 1.1rem;
-                max-width: 62ch;
-            }
-
-            li + li {
-                margin-top: 0.45rem;
-            }
-
-            .summary {
-                margin-top: 1.5rem;
-                padding: 1.25rem 1.35rem;
-                border: 1px solid var(--line);
-                border-radius: 1rem;
-                background: var(--surface);
-            }
-
-            .summary h2 {
-                margin-bottom: 0.85rem;
-                font-size: 1.08rem;
-                letter-spacing: 0;
-                font-family: var(--body);
-                font-weight: 600;
-            }
-
-            section {
-                padding: 1.4rem 0;
-                border-top: 1px solid var(--line);
-            }
-
-            footer {
-                margin-top: 1.6rem;
-                padding-top: 1rem;
-                border-top: 1px solid var(--line);
-                color: var(--muted);
-                font-size: 0.92rem;
-            }
-
-            @media (max-width: 640px) {
-                .page {
-                    width: min(calc(100% - 1.25rem), var(--max-width));
-                    padding: 2rem 0 3rem;
-                }
-
-                .topline {
-                    flex-direction: column;
-                    gap: 0.25rem;
-                    margin-bottom: 2rem;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="../styles.css" />
     </head>
     <body>
-        <div class="page">
-            <div class="topline">
-                <div><strong>Steno</strong> Privacy Policy</div>
-                <div>Last updated April 13, 2026</div>
-            </div>
+        <div class="site">
+            <header class="masthead">
+                <a class="brand" href="../" aria-label="Steno home">
+                    <img
+                        class="brand-mark"
+                        src="../assets/steno-logo.jpg"
+                        alt="Steno waveform logo"
+                        width="40"
+                        height="40"
+                    />
+                    <span class="brand-name">Steno</span>
+                </a>
 
-            <header>
-                <h1>Mostly local. No account. No tracking.</h1>
-                <p>
-                    Steno is a local-first dictation app for macOS, iPhone, and
-                    iPad. Your audio, transcripts, and edits stay on your
-                    device by default. This page explains what the app can
-                    access, when it uses the network, and when content leaves
-                    the app because you asked it to.
-                </p>
-
-                <div class="summary" aria-label="Privacy summary">
-                    <h2>In short</h2>
-                    <ul>
-                        <li>Steno does not require an account.</li>
-                        <li>
-                            Steno does not use ad trackers or third-party
-                            analytics SDKs.
-                        </li>
-                        <li>
-                            Audio and transcript content are processed locally
-                            by default.
-                        </li>
-                        <li>
-                            Handoff shares resume metadata, not full transcript
-                            text.
-                        </li>
-                    </ul>
-                </div>
+                <nav class="nav" aria-label="Site">
+                    <a href="../marketing/">Marketing</a>
+                    <a href="../support/">Support</a>
+                    <a href="./" aria-current="page">Privacy</a>
+                </nav>
             </header>
 
             <main>
-                <section id="access">
+                <section class="hero hero--split">
+                    <div>
+                        <p class="eyebrow">Privacy Policy</p>
+                        <h1>Private by default.</h1>
+                        <p class="lede">
+                            Steno keeps audio and text on your device by
+                            default. This page covers the short version.
+                        </p>
+                    </div>
+
+                    <div class="logo-panel">
+                        <img
+                            src="../assets/steno-logo.jpg"
+                            alt="Steno waveform logo"
+                            width="256"
+                            height="256"
+                        />
+                    </div>
+                </section>
+
+                <section class="cards" aria-label="Privacy highlights">
+                    <article class="card">
+                        <h3>Local-first</h3>
+                        <p>
+                            Audio and transcript processing stay on your device
+                            by default.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>No account</h3>
+                        <p>
+                            Steno does not require sign-in for core
+                            transcription use.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>No tracking</h3>
+                        <p>
+                            Steno does not use ad trackers or third-party
+                            analytics SDKs.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="section">
                     <h2>What Steno may access</h2>
-                    <ul>
+                    <ul class="list-plain">
                         <li>
-                            <strong>Microphone</strong> to record speech you
-                            want to transcribe.
+                            <strong>Microphone</strong>
+                            To record speech you want to transcribe.
                         </li>
                         <li>
-                            <strong>Speech recognition</strong> when Apple
-                            requires it for local transcription features.
+                            <strong>Speech recognition</strong>
+                            When Apple requires it for local transcription
+                            features.
                         </li>
                         <li>
-                            <strong>Accessibility on macOS</strong> when you
-                            use Steno to insert text into another app.
+                            <strong>Accessibility on macOS</strong>
+                            When you use Steno to insert text into another app.
                         </li>
                         <li>
-                            <strong>Clipboard</strong> when you copy text, or
-                            when the macOS insert workflow uses the clipboard to
-                            paste into another app.
+                            <strong>Clipboard</strong>
+                            When you copy text, or when the macOS insert
+                            workflow uses the clipboard to paste text.
                         </li>
                     </ul>
                 </section>
 
-                <section id="local">
+                <section class="section">
                     <h2>What stays local</h2>
-                    <p>
-                        Saved transcripts, settings, and writing profiles are
-                        stored locally on your device. During capture, Steno may
-                        create a temporary local audio file so the device can
-                        complete transcription. That file is removed when
-                        transcription finishes or when capture is canceled.
-                    </p>
-                    <p>
-                        Steno does not send your microphone audio, transcript
-                        text, or refined output to a developer cloud for
-                        transcription or rewriting.
-                    </p>
+                    <ul class="list-plain">
+                        <li>
+                            <strong>Transcripts and settings</strong>
+                            Saved transcripts, settings, and writing profiles
+                            stay on your device.
+                        </li>
+                        <li>
+                            <strong>Temporary audio</strong>
+                            Temporary local audio files used during capture are
+                            removed when transcription finishes or when capture
+                            is canceled.
+                        </li>
+                        <li>
+                            <strong>Model downloads</strong>
+                            If your device downloads models, they are downloaded
+                            so features can run locally.
+                        </li>
+                        <li>
+                            <strong>Handoff</strong>
+                            Handoff can share resume metadata, not the full
+                            transcript body.
+                        </li>
+                        <li>
+                            <strong>Diagnostics</strong>
+                            Diagnostics exports are local files and are shared
+                            only if you choose to send them.
+                        </li>
+                    </ul>
                 </section>
 
-                <section id="network">
-                    <h2>When the network is used</h2>
+                <section class="section">
+                    <h2>Sharing and contact</h2>
                     <p>
-                        Your device may download speech or refine models so they
-                        can run locally. Those downloads are for local feature
-                        delivery, not remote processing.
+                        Copying, sharing, exporting, and pasting are actions
+                        you start. Once content leaves Steno, it is governed by
+                        the app or service you chose.
                     </p>
                     <p>
-                        Steno does not upload your microphone audio or saved
-                        transcript text for advertising, profiling, or cloud
-                        transcription.
-                    </p>
-                </section>
-
-                <section id="sharing">
-                    <h2>Sharing, Handoff, and diagnostics</h2>
-                    <p>
-                        Copying, sharing, exporting, and pasting are actions you
-                        start. Once content leaves Steno, it is governed by the
-                        app or service you send it to.
-                    </p>
-                    <p>
-                        Handoff can share resume metadata such as a transcript
-                        identifier, timing, and where to continue. It does not
-                        automatically share the full transcript body.
-                    </p>
-                    <p>
-                        Diagnostics exports are written to a local file and are
-                        only shared if you choose to send them. They are
-                        designed to include runtime state, model status, error
-                        codes, and latency information, while excluding
-                        transcript text, clipboard contents, and raw-audio
-                        references.
-                    </p>
-                </section>
-
-                <section id="control">
-                    <h2>Your control</h2>
-                    <p>
-                        You can delete saved transcripts in the app, remove
-                        downloaded models where those controls are available, or
-                        delete the app and its local data from your device.
-                    </p>
-                    <p>
-                        Because Steno does not depend on a developer account for
-                        core transcription, the developer generally cannot
-                        remotely recover or delete your local transcripts for
-                        you.
-                    </p>
-                </section>
-
-                <section id="changes">
-                    <h2>Changes and contact</h2>
-                    <p>
-                        This page may be updated if the product changes. The
-                        current version will always be posted here with its
-                        effective date.
-                    </p>
-                    <p>
-                        If you have questions about this policy or Steno's
-                        privacy practices, email
+                        Questions about privacy:
                         <a href="mailto:hello@panchamkhaitan.com"
                             >hello@panchamkhaitan.com</a
                         >
-                        or visit the <a href="../support/">support page</a>.
+                        or the <a href="../support/">support page</a>.
                     </p>
-
-                    <footer>
-                        <p>Steno Privacy Policy. Last updated April 13, 2026.</p>
-                    </footer>
                 </section>
             </main>
+
+            <footer class="footer">
+                Steno Privacy Policy. Last updated April 13, 2026.
+            </footer>
         </div>
     </body>
 </html>
