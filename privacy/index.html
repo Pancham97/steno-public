@@ -6,7 +6,7 @@
         <title>Steno Privacy Policy</title>
         <meta
             name="description"
-            content="Privacy policy for Steno, a local-first dictation app for macOS, iPhone, and iPad."
+            content="Privacy policy for Steno, a private offline dictation app for macOS."
         />
         <link rel="stylesheet" href="../styles.css" />
     </head>
@@ -37,8 +37,10 @@
                         <p class="eyebrow">Privacy Policy</p>
                         <h1>Private by default.</h1>
                         <p class="lede">
-                            Steno keeps audio and text on your device by
-                            default. This page covers the short version.
+                            Steno records only while you dictate, transcribes on
+                            your Mac, and keeps audio, transcripts, profiles,
+                            and diagnostics local unless you choose to share
+                            them.
                         </p>
                     </div>
                 </section>
@@ -47,24 +49,24 @@
                     <article class="card">
                         <h3>Local-first</h3>
                         <p>
-                            Audio and transcript processing stay on your device
-                            by default.
+                            Dictation and Profile Rewrite run locally using
+                            models included with the Mac app.
                         </p>
                     </article>
 
                     <article class="card">
                         <h3>No account</h3>
                         <p>
-                            Steno does not require sign-in for core
-                            transcription use.
+                            Steno does not require sign-in, a cloud workspace,
+                            or an online account for core dictation.
                         </p>
                     </article>
 
                     <article class="card">
                         <h3>No tracking</h3>
                         <p>
-                            Steno does not use ad trackers or third-party
-                            analytics SDKs.
+                            Steno does not collect analytics, crash reports,
+                            dictated audio, transcripts, or clipboard contents.
                         </p>
                     </article>
                 </section>
@@ -74,21 +76,28 @@
                     <ul class="list-plain">
                         <li>
                             <strong>Microphone</strong>
-                            To record speech you want to transcribe.
+                            To record speech only while you hold the dictation
+                            key.
                         </li>
                         <li>
                             <strong>Speech recognition</strong>
-                            When Apple requires it for local transcription
+                            When macOS requires permission for local speech
                             features.
                         </li>
                         <li>
                             <strong>Accessibility on macOS</strong>
-                            When you use Steno to insert text into another app.
+                            To insert the completed transcript into the focused
+                            text field after you release the dictation key.
+                            Steno does not use this access to read other app
+                            contents.
                         </li>
                         <li>
                             <strong>Clipboard</strong>
-                            When you copy text, or when the macOS insert
-                            workflow uses the clipboard to paste text.
+                            By default, Steno uses the clipboard only as a
+                            temporary insertion mechanism and restores the
+                            previous clipboard contents after insertion. You can
+                            turn on "Save transcript to clipboard" if you want
+                            completed transcripts to remain on the clipboard.
                         </li>
                     </ul>
                 </section>
@@ -97,9 +106,9 @@
                     <h2>What stays local</h2>
                     <ul class="list-plain">
                         <li>
-                            <strong>Transcripts and settings</strong>
-                            Saved transcripts, settings, and writing profiles
-                            stay on your device.
+                            <strong>Transcripts, settings, and profiles</strong>
+                            Saved transcripts, settings, writing profiles, and
+                            Profile Rewrite output stay on your Mac.
                         </li>
                         <li>
                             <strong>Temporary audio</strong>
@@ -108,14 +117,17 @@
                             is canceled.
                         </li>
                         <li>
-                            <strong>Model downloads</strong>
-                            If your device downloads models, they are downloaded
-                            so features can run locally.
+                            <strong>Bundled models</strong>
+                            The Mac app includes the speech-to-text and Profile
+                            Rewrite models needed for the main dictation flows.
+                            Steno does not send captured audio or transcripts to
+                            a server for transcription or rewriting.
                         </li>
                         <li>
-                            <strong>Handoff</strong>
-                            Handoff can share resume metadata, not the full
-                            transcript body.
+                            <strong>Transcript history</strong>
+                            History is stored only on your Mac. You can turn it
+                            off, choose a retention period, pin transcripts you
+                            want to keep, or delete all history.
                         </li>
                         <li>
                             <strong>Diagnostics</strong>
@@ -143,7 +155,7 @@
             </main>
 
             <footer class="footer">
-                Steno Privacy Policy. Last updated April 13, 2026.
+                Steno Privacy Policy. Last updated April 26, 2026.
             </footer>
         </div>
     </body>

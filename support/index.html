@@ -6,7 +6,7 @@
         <title>Steno Support</title>
         <meta
             name="description"
-            content="Support page for Steno on macOS, iPhone, and iPad."
+            content="Support page for Steno on macOS."
         />
         <link rel="stylesheet" href="../styles.css" />
     </head>
@@ -37,6 +37,7 @@
                         <p class="eyebrow">Support</p>
                         <h1>Help for Steno.</h1>
                         <p class="lede">
+                            Steno is a private, offline dictation app for macOS.
                             For support, bug reports, and general questions,
                             email
                             <a href="mailto:hello@panchamkhaitan.com"
@@ -48,33 +49,73 @@
 
                 <section class="cards cards--2" aria-label="Support details">
                     <article class="card">
-                        <h3>Include this in your email</h3>
+                        <h3>Common checks</h3>
                         <ul class="list">
-                            <li>Device: Mac, iPhone, or iPad.</li>
-                            <li>App version and OS version.</li>
-                            <li>What you expected to happen.</li>
-                            <li>What happened instead.</li>
+                            <li>
+                                Open Steno and complete the first-run setup.
+                            </li>
+                            <li>Allow Microphone access when macOS asks.</li>
+                            <li>
+                                Allow Accessibility access so Steno can insert
+                                completed text into the focused field.
+                            </li>
+                            <li>
+                                Use the "Try Steno" field: hold Fn, speak, then
+                                release Fn.
+                            </li>
                         </ul>
                     </article>
 
                     <article class="card">
-                        <h3>Common checks</h3>
+                        <h3>Include this in your email</h3>
                         <ul class="list">
-                            <li>Confirm Microphone access is enabled.</li>
-                            <li>
-                                Confirm any Apple Speech Recognition permission
-                                the platform requires.
-                            </li>
-                            <li>
-                                On macOS, confirm Accessibility access if text
-                                insertion is not working.
-                            </li>
+                            <li>Mac model and macOS version.</li>
+                            <li>Steno app version.</li>
+                            <li>Which step failed or felt unclear.</li>
+                            <li>Whether Microphone and Accessibility are enabled.</li>
                         </ul>
                     </article>
                 </section>
 
                 <section class="section">
-                    <h2>Privacy</h2>
+                    <h2>Troubleshooting</h2>
+                    <ul class="list-plain">
+                        <li>
+                            <strong>Steno cannot record audio</strong>
+                            Open System Settings > Privacy & Security >
+                            Microphone and make sure Steno is enabled.
+                        </li>
+                        <li>
+                            <strong>Steno cannot insert text</strong>
+                            Open System Settings > Privacy & Security >
+                            Accessibility and make sure Steno is enabled. Steno
+                            uses this permission only to insert the completed
+                            transcript after you release Fn.
+                        </li>
+                        <li>
+                            <strong>Profile Rewrite is unavailable</strong>
+                            Keep Steno open until the first setup warmup
+                            finishes. The speech-to-text and Profile Rewrite
+                            models are included with Steno and run locally on
+                            your Mac.
+                        </li>
+                        <li>
+                            <strong>Clipboard contents changed</strong>
+                            By default, Steno restores your previous clipboard
+                            after text insertion. Turn on "Save transcript to
+                            clipboard" in Settings if you want completed
+                            transcripts to stay on the clipboard.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2>Diagnostics and privacy</h2>
+                    <p>
+                        Open Settings > General > Diagnostics to export a
+                        privacy-safe troubleshooting bundle. Diagnostics do not
+                        include dictated text, audio, or clipboard contents.
+                    </p>
                     <p>
                         Privacy details are available in the
                         <a href="../privacy/">Steno Privacy Policy</a>.
