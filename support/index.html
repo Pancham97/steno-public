@@ -56,8 +56,8 @@
                             </li>
                             <li>Allow Microphone access when macOS asks.</li>
                             <li>
-                                Allow Accessibility access so Steno can insert
-                                completed text into the focused field.
+                                Use the local Capture Model readiness checks in
+                                first-run setup.
                             </li>
                             <li>
                                 Use the "Try Steno" field: hold Fn, speak, then
@@ -72,7 +72,7 @@
                             <li>Mac model and macOS version.</li>
                             <li>Steno app version.</li>
                             <li>Which step failed or felt unclear.</li>
-                            <li>Whether Microphone and Accessibility are enabled.</li>
+                            <li>Whether Microphone access is enabled.</li>
                         </ul>
                     </article>
                 </section>
@@ -86,11 +86,11 @@
                             Microphone and make sure Steno is enabled.
                         </li>
                         <li>
-                            <strong>Steno cannot insert text</strong>
-                            Open System Settings > Privacy & Security >
-                            Accessibility and make sure Steno is enabled. Steno
-                            uses this permission only to insert the completed
-                            transcript after you release Fn.
+                            <strong>Steno did not change the clipboard</strong>
+                            Open Settings > General and make sure "Copy
+                            transcript to clipboard after dictation" is on. If it
+                            is off, Steno keeps completed transcripts in local
+                            history without changing your clipboard.
                         </li>
                         <li>
                             <strong>Profile Rewrite is unavailable</strong>
@@ -101,10 +101,10 @@
                         </li>
                         <li>
                             <strong>Clipboard contents changed</strong>
-                            By default, Steno restores your previous clipboard
-                            after text insertion. Turn on "Save transcript to
-                            clipboard" in Settings if you want completed
-                            transcripts to stay on the clipboard.
+                            By default, Steno copies each completed transcript to
+                            the clipboard for manual paste. Turn off "Copy
+                            transcript to clipboard after dictation" in Settings
+                            if you want Steno to leave your clipboard unchanged.
                         </li>
                     </ul>
                 </section>
