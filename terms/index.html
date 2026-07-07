@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Steno — Terms</title>
+        <meta
+            name="description"
+            content="Terms for Steno, a private dictation app for Mac."
+        />
+        <link rel="stylesheet" href="../styles.css" />
+        <script>
+            document.documentElement.classList.add("js");
+            addEventListener("load", function () {
+                setTimeout(function () {
+                    if (window.__stenoEnhanced) return;
+                    var els = document.querySelectorAll("[data-reveal]");
+                    for (var i = 0; i < els.length; i++)
+                        els[i].classList.add("is-visible");
+                }, 800);
+            });
+        </script>
+    </head>
+    <body>
+        <header class="wrap nav">
+            <a class="brand" href="../" aria-label="Steno homepage">
+                <img src="../assets/steno-logo.jpg" alt="" width="30" height="30" />
+                Steno
+            </a>
+            <div class="nav-right">
+                <nav class="nav-links" aria-label="Site">
+                    <a href="../support/">Support</a>
+                    <a href="../privacy/">Privacy</a>
+                    <a href="./" aria-current="page">Terms</a>
+                </nav>
+                <a
+                    class="btn"
+                    href="https://apps.apple.com/in/app/steno-dictation/id6762076728?mt=12"
+                >
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path
+                            d="M8 1.75v8.5M8 10.25 11 7.25M8 10.25 5 7.25M2.5 12.75h11"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    Download
+                </a>
+            </div>
+        </header>
+
+        <main class="wrap page">
+            <div class="page-hero" data-reveal>
+                <p class="eyebrow">Terms</p>
+                <h1>Terms for Steno.</h1>
+                <p class="lede">
+                    These terms cover your use of Steno, a dictation app for Mac.
+                </p>
+            </div>
+
+            <section class="prose-section" data-reveal>
+                <h2>Using Steno</h2>
+                <p>
+                    Steno is a personal app. You are responsible for the content
+                    you dictate, edit, copy, paste, export, or share from it.
+                </p>
+                <p>
+                    Use Steno only where you are allowed to record speech. Laws and
+                    workplace rules may require you to tell people or get their
+                    consent before recording them.
+                </p>
+            </section>
+
+            <section class="prose-section" data-reveal>
+                <h2>Local content</h2>
+                <p>
+                    Steno keeps your dictation data on your Mac by default. You
+                    control what you copy, paste, export, or send to other apps
+                    after Steno creates a transcript.
+                </p>
+            </section>
+
+            <section class="prose-section" data-reveal>
+                <h2>Support</h2>
+                <p>
+                    For support, bug reports, or questions about these terms,
+                    email
+                    <a class="prose-link" href="mailto:hello@panchamkhaitan.com"
+                        >hello@panchamkhaitan.com</a
+                    >
+                    or visit the
+                    <a class="prose-link" href="../support/">support page</a>.
+                </p>
+            </section>
+        </main>
+
+        <footer class="wrap footer">
+            <span>Steno Terms. Last updated July 7, 2026.</span>
+            <span class="footer-links">
+                <a href="../support/">Support</a>
+                <a href="../privacy/">Privacy</a>
+            </span>
+        </footer>
+
+        <script src="../main.js" defer></script>
+    </body>
+</html>

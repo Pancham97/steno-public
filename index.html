@@ -3,91 +3,364 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Steno</title>
+        <title>Steno — Private, on-device dictation for Mac</title>
         <meta
             name="description"
-            content="Steno is a local-first dictation app for macOS."
+            content="On-device dictation for Mac. Hold a key, talk, and paste. Everything runs on your Mac — no account, no subscription — with profiles that reshape your words into the format you need."
         />
         <link rel="stylesheet" href="./styles.css" />
+        <script>
+            document.documentElement.classList.add("js");
+            /* Safety net: if the deferred enhancement never runs, reveal all
+               content so nothing can stay permanently hidden. */
+            addEventListener("load", function () {
+                setTimeout(function () {
+                    if (window.__stenoEnhanced) return;
+                    var els = document.querySelectorAll("[data-reveal]");
+                    for (var i = 0; i < els.length; i++)
+                        els[i].classList.add("is-visible");
+                }, 800);
+            });
+        </script>
     </head>
     <body>
-        <div class="site site--wide">
-            <header class="masthead">
-                <a class="brand" href="./" aria-label="Steno home">
-                    <img
-                        class="brand-mark"
-                        src="./assets/steno-logo.jpg"
-                        alt="Steno waveform logo"
-                        width="40"
-                        height="40"
-                    />
-                    <span class="brand-name">Steno</span>
-                </a>
-
-                <nav class="nav" aria-label="Site">
-                    <a href="./" aria-current="page">Steno</a>
+        <header class="wrap nav">
+            <a class="brand" href="./" aria-label="Steno homepage">
+                <img
+                    src="./assets/steno-logo.jpg"
+                    alt=""
+                    width="30"
+                    height="30"
+                />
+                Steno
+            </a>
+            <div class="nav-right">
+                <nav class="nav-links" aria-label="Site">
                     <a href="./support/">Support</a>
                     <a href="./privacy/">Privacy</a>
+                    <a href="./terms/">Terms</a>
                 </nav>
-            </header>
+                <a
+                    class="btn"
+                    href="https://apps.apple.com/in/app/steno-dictation/id6762076728?mt=12"
+                >
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path
+                            d="M8 1.75v8.5M8 10.25 11 7.25M8 10.25 5 7.25M2.5 12.75h11"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    Download
+                </a>
+            </div>
+        </header>
 
-            <main>
-                <section class="hero">
-                    <div>
-                        <p class="eyebrow">Local-first Mac dictation</p>
-                        <h1>Speech to text on your Mac.</h1>
-                        <p class="lede">
-                            Steno lets you capture speech and turn it into text
-                            locally on your Mac.
-                        </p>
-                    </div>
-                </section>
-
-                <section class="cards" aria-label="Highlights">
-                    <article class="card">
-                        <h3>Local-first</h3>
-                        <p>
-                            Audio and transcript work stay on your device by
-                            default.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3>No account required</h3>
-                        <p>
-                            Start using Steno without a sign-in flow or a
-                            required cloud account.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3>Built for Mac</h3>
-                        <p>
-                            Designed for macOS with a native hold-to-dictate
-                            workflow.
-                        </p>
-                    </article>
-                </section>
-
-                <section class="section">
-                    <h2>More information</h2>
-                    <p>
-                        Need help or want to review privacy details? Use the
-                        links below.
+        <main>
+            <section class="wrap hero" aria-labelledby="hero-title">
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow">Dictation for Mac</p>
+                    <h1 id="hero-title">
+                        Talk instead of typing.<span class="h1-note"
+                            >Without subscriptions.</span
+                        >
+                    </h1>
+                    <p class="lede">
+                        Steno turns speech into text on your Mac — nothing is
+                        uploaded, nothing is tracked. Then Profiles reshape it into
+                        whatever you're writing.
                     </p>
-                    <div class="page-links">
-                        <a href="./support/">Support</a>
-                        <a href="./privacy/">Privacy Policy</a>
+                    <div class="hero-actions">
+                        <a
+                            class="appstore"
+                            href="https://apps.apple.com/in/app/steno-dictation/id6762076728?mt=12"
+                            aria-label="Download Steno on the Mac App Store"
+                        >
+                            <img
+                                src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83"
+                                alt="Download on the Mac App Store"
+                                width="152"
+                                height="46"
+                            />
+                        </a>
+                        <a class="tlink" href="./privacy/">Read privacy details</a>
                     </div>
-                </section>
-            </main>
+                    <ul class="hero-meta">
+                        <li>Runs on your Mac</li>
+                        <li>No account</li>
+                        <li>$39 once</li>
+                    </ul>
+                </div>
 
-            <footer class="footer">
+                <div
+                    class="hero-demo"
+                    data-reveal
+                    data-state="idle"
+                    style="--reveal-d: 120ms"
+                >
+                    <div class="mac">
+                        <div class="mac-bar" aria-hidden="true">
+                            <svg class="mac-apple" viewBox="0 0 384 512">
+                                <path
+                                    fill="currentColor"
+                                    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+                                />
+                            </svg>
+                            <span class="mac-app">Notes</span>
+                            <span class="mac-menu">File</span>
+                            <span class="mac-menu">Edit</span>
+                            <span class="mac-fill"></span>
+                            <svg class="mac-steno" viewBox="0 0 20 12">
+                                <g fill="currentColor">
+                                    <rect x="0" y="4.5" width="2" height="3" rx="1" />
+                                    <rect x="4" y="2.5" width="2" height="7" rx="1" />
+                                    <rect x="8" y="0" width="2" height="12" rx="1" />
+                                    <rect x="12" y="3" width="2" height="6" rx="1" />
+                                    <rect x="16" y="5" width="2" height="2" rx="1" />
+                                </g>
+                            </svg>
+                            <span class="mac-clock">9:41</span>
+                        </div>
+                        <div class="mac-desk">
+                            <div class="doc" aria-hidden="true">
+                                <div class="doc-bar">
+                                    <span class="lights">
+                                        <i></i><i></i><i></i>
+                                    </span>
+                                    <span class="doc-title">New Note</span>
+                                </div>
+                                <div class="doc-body">
+                                    <p class="doc-text">
+                                        <span class="doc-typed"></span
+                                        ><span class="caret"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pop" aria-hidden="true">
+                                <div class="pop-head">
+                                    <span class="rec"></span>
+                                    <span class="pop-state">Listening</span>
+                                    <span class="pop-time">0:00</span>
+                                    <span class="pop-profile">Dictation</span>
+                                </div>
+                                <div class="wave">
+                                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                                </div>
+                                <div class="pop-copied">
+                                    <svg class="pop-clip" viewBox="0 0 20 20">
+                                        <path
+                                            fill="currentColor"
+                                            d="M10 1.6a8.4 8.4 0 100 16.8 8.4 8.4 0 000-16.8zm4.1 6.2-4.9 4.9a1 1 0 0 1-1.4 0L5.8 10.6a1 1 0 1 1 1.4-1.4l1.3 1.3 4.2-4.2a1 1 0 0 1 1.4 1.5z"
+                                        />
+                                    </svg>
+                                    <span class="pop-quote"></span>
+                                </div>
+                            </div>
+                            <div class="paste-keys" aria-hidden="true">
+                                <span class="pk">&#8984;</span>
+                                <span class="pk">V</span>
+                                <span class="pk-label">Paste</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="try">
+                        <button
+                            type="button"
+                            class="fnkey"
+                            aria-label="Hold to dictate with Steno"
+                        >
+                            Fn
+                        </button>
+                        <span class="try-hint" aria-hidden="true"
+                            >Hold to dictate</span
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section class="wrap section" aria-labelledby="how-title">
+                <div class="section-head" data-reveal>
+                    <p class="eyebrow">How it works</p>
+                    <h2 id="how-title">Hold a key, talk, and paste.</h2>
+                </div>
+                <div class="steps-grid">
+                    <div class="step" data-reveal>
+                        <span class="step-num">01</span>
+                        <h3>Hold the Fn key</h3>
+                        <p>
+                            Press and hold the Fn key in any app. A small Steno
+                            window opens.
+                        </p>
+                    </div>
+                    <div class="step" data-reveal style="--reveal-d: 80ms">
+                        <span class="step-num">02</span>
+                        <h3>Talk</h3>
+                        <p>
+                            Say what you want to write. Steno turns it into clean,
+                            punctuated text.
+                        </p>
+                    </div>
+                    <div class="step" data-reveal style="--reveal-d: 160ms">
+                        <span class="step-num">03</span>
+                        <h3>Paste</h3>
+                        <p>
+                            Steno copies the text. Paste it into Mail, Notes,
+                            Messages, or any other app.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wrap section" aria-labelledby="profiles-title">
+                <div class="section-head" data-reveal>
+                    <p class="eyebrow">Profiles</p>
+                    <h2 id="profiles-title">
+                        Your words, in the shape you need.
+                    </h2>
+                    <p class="lede">
+                        Steno doesn't guess how your words should look — you
+                        decide. Create a profile with your own instructions, and
+                        Steno reshapes what you say to match: one for support
+                        replies, one for standup updates, or whatever you write
+                        most.
+                    </p>
+                </div>
+
+                <div class="io-grid">
+                    <article class="io" data-reveal>
+                        <div class="io-bar">
+                            <span class="tag">Customer email</span>
+                            <span class="on-device">rewritten on your Mac</span>
+                        </div>
+                        <div class="io-block io-said-block">
+                            <span class="io-label">You said</span>
+                            <p class="io-said">
+                                "thanks for writing in, sorry about the trouble,
+                                it's almost always mic permission — open system
+                                settings, then privacy and security, then
+                                microphone, turn steno on, and restart it"
+                            </p>
+                        </div>
+                        <div class="io-block io-out">
+                            <span class="io-label">Steno wrote</span>
+                            <p>Thanks for writing in, and sorry about the trouble.</p>
+                            <p>This is almost always microphone permission:</p>
+                            <ol>
+                                <li>Open <strong>System Settings</strong></li>
+                                <li>
+                                    Go to
+                                    <strong>Privacy &amp; Security → Microphone</strong>
+                                </li>
+                                <li>Turn <strong>Steno</strong> on, then restart it</li>
+                            </ol>
+                            <p>Best,</p>
+                        </div>
+                    </article>
+
+                    <article class="io" data-reveal style="--reveal-d: 100ms">
+                        <div class="io-bar">
+                            <span class="tag">Standup bullets</span>
+                            <span class="on-device">rewritten on your Mac</span>
+                        </div>
+                        <div class="io-block io-said-block">
+                            <span class="io-label">You said</span>
+                            <p class="io-said">
+                                "today I shipped onboarding behind a flag, dug into
+                                the screen-two drop-off, I'm blocked on analytics
+                                from Priya, and tomorrow I'll run the A/B test if
+                                the events are wired"
+                            </p>
+                        </div>
+                        <div class="io-block io-out">
+                            <span class="io-label">Steno wrote</span>
+                            <p><strong>Done today</strong></p>
+                            <ul>
+                                <li>Shipped onboarding behind a flag</li>
+                                <li>Investigated the screen-two drop-off</li>
+                            </ul>
+                            <p><strong>Blocked</strong></p>
+                            <ul>
+                                <li>Waiting on analytics from Priya</li>
+                            </ul>
+                            <p><strong>Tomorrow</strong></p>
+                            <ul>
+                                <li>Run the A/B test if the events are wired</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="wrap section" aria-labelledby="features-title">
+                <div class="section-head" data-reveal>
+                    <p class="eyebrow">What you get</p>
+                    <h2 id="features-title">Built to stay yours.</h2>
+                </div>
+                <dl class="features">
+                    <div class="feature" data-reveal>
+                        <dt>On-device, always</dt>
+                        <dd>
+                            Speech-to-text and rewriting run on your Mac. Your
+                            audio and transcripts never touch a server.
+                        </dd>
+                    </div>
+                    <div class="feature" data-reveal style="--reveal-d: 80ms">
+                        <dt>Yours to keep</dt>
+                        <dd>
+                            Pay once. No account, no subscription, and no cloud
+                            service to depend on.
+                        </dd>
+                    </div>
+                    <div class="feature" data-reveal style="--reveal-d: 160ms">
+                        <dt>History on your terms</dt>
+                        <dd>
+                            Transcripts stay on your Mac. Choose how long to keep
+                            them, or delete everything at once.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="wrap download" aria-labelledby="cta-title">
+                <p class="eyebrow" data-reveal>Download from the Mac App Store</p>
+                <h2 id="cta-title" data-reveal>Get Steno.</h2>
+                <p data-reveal>
+                    A small, private app for talking instead of typing.
+                    <strong>$39 once</strong> — less than two months of a
+                    subscription, then it's yours, with nothing to renew.
+                </p>
+                <a
+                    class="appstore"
+                    data-reveal
+                    href="https://apps.apple.com/in/app/steno-dictation/id6762076728?mt=12"
+                    aria-label="Download Steno on the Mac App Store"
+                >
+                    <img
+                        src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83"
+                        alt="Download on the Mac App Store"
+                        width="166"
+                        height="50"
+                    />
+                </a>
+            </section>
+        </main>
+
+        <footer class="wrap footer">
+            <span>
                 Contact:
                 <a href="mailto:hello@panchamkhaitan.com"
                     >hello@panchamkhaitan.com</a
                 >
-            </footer>
-        </div>
+            </span>
+            <span class="footer-links">
+                <a href="./support/">Support</a>
+                <a href="./privacy/">Privacy</a>
+                <a href="./terms/">Terms</a>
+            </span>
+        </footer>
+
+        <script src="./main.js" defer></script>
     </body>
 </html>

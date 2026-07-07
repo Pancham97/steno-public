@@ -3,154 +3,191 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Steno Privacy Policy</title>
+        <title>Steno — Privacy Policy</title>
         <meta
             name="description"
             content="Privacy policy for Steno, a private offline dictation app for macOS."
         />
         <link rel="stylesheet" href="../styles.css" />
+        <script>
+            document.documentElement.classList.add("js");
+            addEventListener("load", function () {
+                setTimeout(function () {
+                    if (window.__stenoEnhanced) return;
+                    var els = document.querySelectorAll("[data-reveal]");
+                    for (var i = 0; i < els.length; i++)
+                        els[i].classList.add("is-visible");
+                }, 800);
+            });
+        </script>
     </head>
     <body>
-        <div class="site">
-            <header class="masthead">
-                <a class="brand" href="../" aria-label="Steno home">
-                    <img
-                        class="brand-mark"
-                        src="../assets/steno-logo.jpg"
-                        alt="Steno waveform logo"
-                        width="40"
-                        height="40"
-                    />
-                    <span class="brand-name">Steno</span>
-                </a>
-
-                <nav class="nav" aria-label="Site">
-                    <a href="../">Steno</a>
+        <header class="wrap nav">
+            <a class="brand" href="../" aria-label="Steno homepage">
+                <img src="../assets/steno-logo.jpg" alt="" width="30" height="30" />
+                Steno
+            </a>
+            <div class="nav-right">
+                <nav class="nav-links" aria-label="Site">
                     <a href="../support/">Support</a>
                     <a href="./" aria-current="page">Privacy</a>
+                    <a href="../terms/">Terms</a>
                 </nav>
-            </header>
+                <a
+                    class="btn"
+                    href="https://apps.apple.com/in/app/steno-dictation/id6762076728?mt=12"
+                >
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path
+                            d="M8 1.75v8.5M8 10.25 11 7.25M8 10.25 5 7.25M2.5 12.75h11"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    Download
+                </a>
+            </div>
+        </header>
 
-            <main>
-                <section class="hero">
+        <main class="wrap page">
+            <div class="page-hero" data-reveal>
+                <p class="eyebrow">Privacy Policy</p>
+                <h1>Your data stays on your Mac.</h1>
+                <p class="lede">
+                    Steno only records while you dictate. It turns your speech
+                    into text on your Mac, and keeps your audio, transcripts,
+                    profiles, and diagnostics on your Mac unless you choose to
+                    share them.
+                </p>
+            </div>
+
+            <dl class="trio" data-reveal>
+                <div class="feature">
+                    <dt>Runs on your Mac</dt>
+                    <dd>
+                        Dictation and Profile Rewrite run on your Mac, using
+                        models that come with the app.
+                    </dd>
+                </div>
+                <div class="feature">
+                    <dt>No account</dt>
+                    <dd>
+                        Steno does not need a sign-in or an online account to
+                        work.
+                    </dd>
+                </div>
+                <div class="feature">
+                    <dt>No tracking</dt>
+                    <dd>
+                        Steno does not collect analytics, crash reports, your
+                        audio, your transcripts, or your clipboard.
+                    </dd>
+                </div>
+            </dl>
+
+            <section class="prose-section" data-reveal>
+                <h2>What Steno may access</h2>
+                <dl class="defs">
                     <div>
-                        <p class="eyebrow">Privacy Policy</p>
-                        <h1>Private by default.</h1>
-                        <p class="lede">
-                            Steno records only while you dictate, transcribes
-                            locally on your Mac, and keeps audio, transcripts,
-                            profiles, and diagnostics local unless you choose to
-                            share them.
-                        </p>
-                    </div>
-                </section>
-
-                <section class="cards" aria-label="Privacy highlights">
-                    <article class="card">
-                        <h3>Local-first</h3>
-                        <p>
-                            Dictation and Profile Rewrite run locally using
-                            models included with the Mac app.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3>No account</h3>
-                        <p>
-                            Steno does not require sign-in, a cloud workspace,
-                            or an online account for core dictation.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3>No tracking</h3>
-                        <p>
-                            Steno does not collect analytics, crash reports,
-                            dictated audio, transcripts, or clipboard contents.
-                        </p>
-                    </article>
-                </section>
-
-                <section class="section">
-                    <h2>What Steno may access</h2>
-                    <ul class="list-plain">
-                        <li>
-                            <strong>Microphone</strong>
-                            To record speech only while you hold the dictation
+                        <dt>Microphone</dt>
+                        <dd>
+                            To record your voice only while you hold the dictation
                             key.
-                        </li>
-                        <li>
-                            <strong>Speech recognition</strong>
-                            When macOS requires permission for local speech
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Speech recognition</dt>
+                        <dd>
+                            When macOS asks for permission to use on-device speech
                             features.
-                        </li>
-                        <li>
-                            <strong>Clipboard</strong>
-                            By default, Steno copies completed transcripts to the
-                            clipboard so you can paste them manually into another
-                            app. You can turn off "Copy transcript to clipboard
-                            after dictation" if you want Steno to leave the
-                            clipboard unchanged after dictation.
-                        </li>
-                    </ul>
-                </section>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Clipboard</dt>
+                        <dd>
+                            By default, Steno copies finished transcripts to the
+                            clipboard so you can paste them into another app
+                            yourself. You can turn off "Copy transcript to
+                            clipboard after dictation" if you want Steno to leave
+                            the clipboard unchanged.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
 
-                <section class="section">
-                    <h2>What stays local</h2>
-                    <ul class="list-plain">
-                        <li>
-                            <strong>Transcripts, settings, and profiles</strong>
+            <section class="prose-section" data-reveal>
+                <h2>What stays local</h2>
+                <dl class="defs">
+                    <div>
+                        <dt>Transcripts, settings, and profiles</dt>
+                        <dd>
                             Saved transcripts, settings, writing profiles, and
                             Profile Rewrite output stay on your Mac.
-                        </li>
-                        <li>
-                            <strong>Temporary audio</strong>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Temporary audio</dt>
+                        <dd>
                             Temporary local audio files used during capture are
-                            removed when transcription finishes or when capture
-                            is canceled.
-                        </li>
-                        <li>
-                            <strong>Bundled models</strong>
-                            The Mac app includes the speech-to-text and Profile
-                            Rewrite models needed for the main dictation flows.
-                            Steno does not send captured audio or transcripts to
-                            a server for transcription or rewriting.
-                        </li>
-                        <li>
-                            <strong>Transcript history</strong>
+                            removed when transcription finishes or when capture is
+                            canceled.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Bundled models</dt>
+                        <dd>
+                            The app comes with the speech-to-text and Profile
+                            Rewrite models it needs. Steno does not send your audio
+                            or transcripts to a server.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Transcript history</dt>
+                        <dd>
                             History is stored only on your Mac. You can turn it
                             off, choose a retention period, pin transcripts you
                             want to keep, or delete all history.
-                        </li>
-                        <li>
-                            <strong>Diagnostics</strong>
-                            Diagnostics exports are local files and are shared
-                            only if you choose to send them. Diagnostics do not
-                            include dictated text, audio, or clipboard contents.
-                        </li>
-                    </ul>
-                </section>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Diagnostics</dt>
+                        <dd>
+                            Diagnostics exports are local files and are shared only
+                            if you choose to send them. Diagnostics do not include
+                            dictated text, audio, or clipboard contents.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
 
-                <section class="section">
-                    <h2>Sharing and contact</h2>
-                    <p>
-                        Copying, sharing, exporting, and pasting are actions
-                        you start. Once content leaves Steno, it is governed by
-                        the app or service you chose.
-                    </p>
-                    <p>
-                        Questions about privacy:
-                        <a href="mailto:hello@panchamkhaitan.com"
-                            >hello@panchamkhaitan.com</a
-                        >
-                        or the <a href="../support/">support page</a>.
-                    </p>
-                </section>
-            </main>
+            <section class="prose-section" data-reveal>
+                <h2>Sharing and contact</h2>
+                <p>
+                    Copying, sharing, exporting, and pasting are actions you
+                    start. Once content leaves Steno, it is governed by the app or
+                    service you chose.
+                </p>
+                <p>
+                    Questions about privacy:
+                    <a class="prose-link" href="mailto:hello@panchamkhaitan.com"
+                        >hello@panchamkhaitan.com</a
+                    >
+                    or the
+                    <a class="prose-link" href="../support/">support page</a>.
+                </p>
+            </section>
+        </main>
 
-            <footer class="footer">
-                Steno Privacy Policy. Last updated May 6, 2026.
-            </footer>
-        </div>
+        <footer class="wrap footer">
+            <span>Steno Privacy Policy. Last updated May 6, 2026.</span>
+            <span class="footer-links">
+                <a href="../support/">Support</a>
+                <a href="../terms/">Terms</a>
+            </span>
+        </footer>
+
+        <script src="../main.js" defer></script>
     </body>
 </html>

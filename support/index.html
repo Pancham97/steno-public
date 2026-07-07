@@ -3,132 +3,158 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Steno Support</title>
-        <meta
-            name="description"
-            content="Support page for Steno on macOS."
-        />
+        <title>Steno — Support</title>
+        <meta name="description" content="Support page for Steno on macOS." />
         <link rel="stylesheet" href="../styles.css" />
+        <script>
+            document.documentElement.classList.add("js");
+            addEventListener("load", function () {
+                setTimeout(function () {
+                    if (window.__stenoEnhanced) return;
+                    var els = document.querySelectorAll("[data-reveal]");
+                    for (var i = 0; i < els.length; i++)
+                        els[i].classList.add("is-visible");
+                }, 800);
+            });
+        </script>
     </head>
     <body>
-        <div class="site">
-            <header class="masthead">
-                <a class="brand" href="../" aria-label="Steno home">
-                    <img
-                        class="brand-mark"
-                        src="../assets/steno-logo.jpg"
-                        alt="Steno waveform logo"
-                        width="40"
-                        height="40"
-                    />
-                    <span class="brand-name">Steno</span>
-                </a>
-
-                <nav class="nav" aria-label="Site">
-                    <a href="../">Steno</a>
+        <header class="wrap nav">
+            <a class="brand" href="../" aria-label="Steno homepage">
+                <img src="../assets/steno-logo.jpg" alt="" width="30" height="30" />
+                Steno
+            </a>
+            <div class="nav-right">
+                <nav class="nav-links" aria-label="Site">
                     <a href="./" aria-current="page">Support</a>
                     <a href="../privacy/">Privacy</a>
+                    <a href="../terms/">Terms</a>
                 </nav>
-            </header>
+                <a
+                    class="btn"
+                    href="https://apps.apple.com/in/app/steno-dictation/id6762076728?mt=12"
+                >
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path
+                            d="M8 1.75v8.5M8 10.25 11 7.25M8 10.25 5 7.25M2.5 12.75h11"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    Download
+                </a>
+            </div>
+        </header>
 
-            <main>
-                <section class="hero">
-                    <div>
-                        <p class="eyebrow">Support</p>
-                        <h1>Help for Steno.</h1>
-                        <p class="lede">
-                            Steno is a private, offline dictation app for macOS.
-                            For support, bug reports, and general questions,
-                            email
-                            <a href="mailto:hello@panchamkhaitan.com"
-                                >hello@panchamkhaitan.com</a
-                            >.
-                        </p>
-                    </div>
-                </section>
+        <main class="wrap page">
+            <div class="page-hero" data-reveal>
+                <p class="eyebrow">Support</p>
+                <h1>Help for Steno.</h1>
+                <p class="lede">
+                    Steno is a dictation app for Mac that works offline. For help,
+                    bug reports, or questions, email
+                    <a class="prose-link" href="mailto:hello@panchamkhaitan.com"
+                        >hello@panchamkhaitan.com</a
+                    >.
+                </p>
+            </div>
 
-                <section class="cards cards--2" aria-label="Support details">
-                    <article class="card">
-                        <h3>Common checks</h3>
-                        <ul class="list">
-                            <li>
-                                Open Steno and complete the first-run setup.
-                            </li>
-                            <li>Allow Microphone access when macOS asks.</li>
-                            <li>
-                                Use the local Capture Model readiness checks in
-                                first-run setup.
-                            </li>
-                            <li>
-                                Use the "Try Steno" field: hold Fn, speak, then
-                                release Fn.
-                            </li>
-                        </ul>
-                    </article>
-
-                    <article class="card">
-                        <h3>Include this in your email</h3>
-                        <ul class="list">
-                            <li>Mac model and macOS version.</li>
-                            <li>Steno app version.</li>
-                            <li>Which step failed or felt unclear.</li>
-                            <li>Whether Microphone access is enabled.</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section class="section">
-                    <h2>Troubleshooting</h2>
-                    <ul class="list-plain">
+            <div class="cards" data-reveal>
+                <article class="card">
+                    <h3>Common checks</h3>
+                    <ul class="list">
+                        <li>Open Steno and complete the first-run setup.</li>
+                        <li>Allow Microphone access when macOS asks.</li>
+                        <li>Let first-run setup finish so the model is ready.</li>
                         <li>
-                            <strong>Steno cannot record audio</strong>
-                            Open System Settings > Privacy & Security >
-                            Microphone and make sure Steno is enabled.
-                        </li>
-                        <li>
-                            <strong>Steno did not change the clipboard</strong>
-                            Open Settings > General and make sure "Copy
-                            transcript to clipboard after dictation" is on. If it
-                            is off, Steno keeps completed transcripts in local
-                            history without changing your clipboard.
-                        </li>
-                        <li>
-                            <strong>Profile Rewrite is unavailable</strong>
-                            Keep Steno open until the first setup warmup
-                            finishes. The speech-to-text and Profile Rewrite
-                            models are included with Steno and run locally on
-                            your Mac.
-                        </li>
-                        <li>
-                            <strong>Clipboard contents changed</strong>
-                            By default, Steno copies each completed transcript to
-                            the clipboard for manual paste. Turn off "Copy
-                            transcript to clipboard after dictation" in Settings
-                            if you want Steno to leave your clipboard unchanged.
+                            Try it in the "Try Steno" box: hold Fn, talk, then let
+                            go of Fn.
                         </li>
                     </ul>
-                </section>
+                </article>
 
-                <section class="section">
-                    <h2>Diagnostics and privacy</h2>
-                    <p>
-                        Open Settings > General > Diagnostics to export a
-                        privacy-safe troubleshooting bundle. Diagnostics do not
-                        include dictated text, audio, or clipboard contents.
-                    </p>
-                    <p>
-                        Privacy details are available in the
-                        <a href="../privacy/">Steno Privacy Policy</a>.
-                    </p>
-                </section>
-            </main>
+                <article class="card">
+                    <h3>Include this in your email</h3>
+                    <ul class="list">
+                        <li>Mac model and macOS version.</li>
+                        <li>Steno app version.</li>
+                        <li>Which step failed or felt unclear.</li>
+                        <li>Whether Microphone access is enabled.</li>
+                    </ul>
+                </article>
+            </div>
 
-            <footer class="footer">
+            <section class="prose-section" data-reveal>
+                <h2>Troubleshooting</h2>
+                <dl class="defs">
+                    <div>
+                        <dt>Steno cannot record audio</dt>
+                        <dd>
+                            Open System Settings &gt; Privacy &amp; Security &gt;
+                            Microphone and make sure Steno is enabled.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Steno did not change the clipboard</dt>
+                        <dd>
+                            Open Settings &gt; General and make sure "Copy
+                            transcript to clipboard after dictation" is on. If it
+                            is off, Steno keeps finished transcripts on your Mac
+                            without changing your clipboard.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Profile Rewrite is unavailable</dt>
+                        <dd>
+                            Keep Steno open until first-run setup finishes. The
+                            speech-to-text and Profile Rewrite models come with
+                            Steno and run on your Mac.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Clipboard contents changed</dt>
+                        <dd>
+                            By default, Steno copies each finished transcript to
+                            the clipboard so you can paste it yourself. Turn off
+                            "Copy transcript to clipboard after dictation" in
+                            Settings if you want Steno to leave your clipboard
+                            unchanged.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="prose-section" data-reveal>
+                <h2>Diagnostics and privacy</h2>
+                <p>
+                    Open Settings &gt; General &gt; Diagnostics to save a
+                    troubleshooting file. It does not include your dictated text,
+                    audio, or clipboard contents.
+                </p>
+                <p>
+                    Privacy details are available in the
+                    <a class="prose-link" href="../privacy/"
+                        >Steno Privacy Policy</a
+                    >.
+                </p>
+            </section>
+        </main>
+
+        <footer class="wrap footer">
+            <span>
                 Support:
                 <a href="mailto:hello@panchamkhaitan.com"
                     >hello@panchamkhaitan.com</a
                 >
-            </footer>
-        </div>
+            </span>
+            <span class="footer-links">
+                <a href="../privacy/">Privacy</a>
+                <a href="../terms/">Terms</a>
+            </span>
+        </footer>
+
+        <script src="../main.js" defer></script>
     </body>
 </html>
